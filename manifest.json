@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "게더타운 접속자 명단 긁어오기",
+    "version": "1.0",
+    "permissions": ["storage", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_icon": "icon.png"
+    },
+    "host_permissions": [
+      "https://specific-site.com/*" 
+    ]
+  }
+  
