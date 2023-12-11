@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <script src="jquery.min.js"></script>
+</head>
+
+<body style="min-width:550px;">
+  <img src="./17th_logo_new.png">
+  <h1 id="title"></h1>
+  <div id="user_list">
+  <ul>
+    for (let i = 0; i < 5; i++) {
+      <li class="off_line">홍길동</li>
+    }
+  </ul>  
+  </div><br>
+  <button id="reLoad">새로고침</button>
+  <button id="fnc_user_in">출석</button>
+  <button id="fnc_user_out">퇴실</button>
+  <label id="status"></label>
+  <script src="popup.js"></script>
+
+</body>
+</html>

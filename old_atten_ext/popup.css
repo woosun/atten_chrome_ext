@@ -1,0 +1,42 @@
+* {
+    font-size: 15px;
+    text-align: center;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    width: 60px;
+    height: 40px;
+    display: inline-block;
+    padding: 2px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  } 
+  li:not(:first-child){
+    border-top: 1px solid black;
+  }
+  #user_list li.off_line {
+    background-color: #fff;
+    color: #000;
+  }
+  #user_list li.on_line{
+    background-color : #48eb48;
+    color: #fff;
+  }
+  
+  #user_list li.active {
+    background-color: #2c2c2c;
+  }
+  body {
+      margin: 5px;
+  }
+  h1 {text-align: center;}
+  .ws_red{
+    color: red;
+  }
+  .ws_blue{
+    color: blue;
+  }
