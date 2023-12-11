@@ -1,28 +1,13 @@
+function executePeriodicTask() {
+  // 주기적으로 실행
+  setInterval(() => {
+    // 백그라운드 스크립트에 메시지를 보내어 Gather.Town에서 사용자 목록을 가져오도록 지시
+    chrome.runtime.sendMessage({ action: 'executeBackgroundTask' });
+  }, 1000);
+}
+
+// Background에서 실행될 때 초기화 작업 수행
 chrome.runtime.onInstalled.addListener(() => {
-  console.log("Extension installed.");
-
-  // 1초마다 작업을 수행하는 함수 호출
-  setInterval(doPeriodicTask, 1000);
+  // 초기화 및 설정
+  executePeriodicTask();
 });
-
-function doPeriodicTask() {
-  // 1초마다 실행되는 작업
-  console.log("Periodic task executed.");
-}
-
-chrome.action && chrome.action.onClicked.addListener((tab) => {
-  const currentUrl = tab.url;
-  if (isAllowedDomain(currentUrl)) {
-    fetchData(tab);
-  } else {
-    console.log("This site is not allowed.");
-  }
-});
-
-function isAllowedDomain(url) {
-  return url.startsWith("https://app.gather.town/");
-}
-
-function fetchData(tab) {
-  console.log("Fetching data from the allowed domain:", tab.url);
-}

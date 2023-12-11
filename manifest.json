@@ -1,11 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "게더타운 접속자 명단 긁어오기",
+  "name": "게더타운 사용자 정보 수집",
   "version": "1.0",
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["tabs","storage", "activeTab", "webRequest", "webNavigation", "http://127.0.0.1:7777/*"],
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["*://app.gather.town/*"],
+      "js": ["background.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
   "host_permissions": [
     "*://app.gather.town/*"
   ]
