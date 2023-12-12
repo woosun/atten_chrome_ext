@@ -1,19 +1,16 @@
 {
+  "name": "접속자 및 출석체크확인프로그램",
+  "description": "v1.4 수정사항 출석체크안해도되는아이들 클릭으로 회색처리",
+  "version": "1.4",
   "manifest_version": 3,
-  "name": "게더타운 사용자 정보 수집",
-  "version": "1.0",
-  "permissions": ["tabs","storage", "activeTab", "webRequest", "webNavigation", "http://127.0.0.1:7777/*"],
-  "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["*://app.gather.town/*"],
-      "js": ["background.js", "content.js"],
-      "run_at": "document_idle"
-    }
+  "permissions": [
+    "scripting"
   ],
   "host_permissions": [
-    "*://app.gather.town/*"
-  ]
+    "https://app.gather.town/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+
 }
