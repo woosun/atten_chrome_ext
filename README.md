@@ -1,6 +1,6 @@
-# 자동화 하고 내 공부하자 프로젝트 제1탄.
-
 ## 게더타운 접속자를 확인하는 크롬익스텐션 개발
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fwoosun%2F*&count_bg=%2355C2FF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 ### 1. 출석자명단 표시 및 실시간 업데이트**
 
